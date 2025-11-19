@@ -1,0 +1,953 @@
+{
+    "language": "en-US",
+    "logo": {
+        "name": "logo-8USpEJfsFH.png",
+        "fullPath": "courses/oztxiRZJ7qvzjrAHx0G8/resources/logo-8USpEJfsFH.png",
+        "url": "https://firebasestorage.googleapis.com/v0/b/scormhero.appspot.com/o/courses%2FoztxiRZJ7qvzjrAHx0G8%2Fresources%2Flogo-8USpEJfsFH.png?alt=media&token=ba5f82d9-ded7-425a-b743-45857d3632c2"
+    },
+    "name": "CI CONTROL & INSTRUMENTATION",
+    "pages": [
+        {
+            "order": 2,
+            "closedCaption": {
+                "name": "",
+                "fullPath": "",
+                "url": ""
+            },
+            "resourceType": "video",
+            "resourceId": "DBVBhChlJ3",
+            "title": "8A - What is Instrumentation and Control system",
+            "settings": {
+                "disablePlaybackRate": false,
+                "disableSeek": false,
+                "disablePiP": false
+            },
+            "video": {
+                "vimeoUrl": "",
+                "name": "video-Iv0zUYMzrV.mp4",
+                "url": "https://firebasestorage.googleapis.com/v0/b/scormhero.appspot.com/o/courses%2FoztxiRZJ7qvzjrAHx0G8%2Fresources%2Fvideo-Iv0zUYMzrV.mp4?alt=media&token=a1cc879b-3644-4e6f-90a1-9b99e819f956",
+                "fullPath": "courses/oztxiRZJ7qvzjrAHx0G8/resources/video-Iv0zUYMzrV.mp4",
+                "youtubeUrl": "",
+                "type": "upload"
+            }
+        },
+        {
+            "video": {
+                "fullPath": "courses/oztxiRZJ7qvzjrAHx0G8/resources/video-Yz2LPtfuco.mp4",
+                "name": "video-Yz2LPtfuco.mp4",
+                "type": "upload",
+                "url": "https://firebasestorage.googleapis.com/v0/b/scormhero.appspot.com/o/courses%2FoztxiRZJ7qvzjrAHx0G8%2Fresources%2Fvideo-Yz2LPtfuco.mp4?alt=media&token=2a3770c9-f867-426d-be53-4a16a33ff506"
+            },
+            "order": 3,
+            "settings": {
+                "disablePlaybackRate": false,
+                "disablePiP": false,
+                "disableSeek": false
+            },
+            "resourceType": "video",
+            "title": "8A - What is Instrumentation",
+            "resourceId": "ydJ8Hz8i1N",
+            "closedCaption": {
+                "url": "",
+                "fullPath": "",
+                "name": ""
+            }
+        },
+        {
+            "closedCaption": {
+                "fullPath": "",
+                "name": "",
+                "url": ""
+            },
+            "video": {
+                "fullPath": "courses/oztxiRZJ7qvzjrAHx0G8/resources/video-PxPSGCEVvk.mp4",
+                "type": "upload",
+                "name": "video-PxPSGCEVvk.mp4",
+                "url": "https://firebasestorage.googleapis.com/v0/b/scormhero.appspot.com/o/courses%2FoztxiRZJ7qvzjrAHx0G8%2Fresources%2Fvideo-PxPSGCEVvk.mp4?alt=media&token=fd15eda2-bdca-413f-a05c-34c38987a974"
+            },
+            "resourceType": "video",
+            "settings": {
+                "disablePlaybackRate": false,
+                "disablePiP": false,
+                "disableSeek": false
+            },
+            "title": "8A - What is an Instrument Technician & Process control loops - Instrument technician Course",
+            "order": 4,
+            "resourceId": "QDM81yP6un"
+        },
+        {
+            "closedCaption": {
+                "url": "",
+                "name": "",
+                "fullPath": ""
+            },
+            "resourceId": "0g7SzjmNrw",
+            "video": {
+                "url": "https://firebasestorage.googleapis.com/v0/b/scormhero.appspot.com/o/courses%2FoztxiRZJ7qvzjrAHx0G8%2Fresources%2Fvideo-nItig8VTWW.mp4?alt=media&token=4be0f351-98a2-4399-b382-f3e2ebd4d7eb",
+                "type": "upload",
+                "name": "video-nItig8VTWW.mp4",
+                "fullPath": "courses/oztxiRZJ7qvzjrAHx0G8/resources/video-nItig8VTWW.mp4"
+            },
+            "settings": {
+                "disablePlaybackRate": false,
+                "disableSeek": false,
+                "disablePiP": false
+            },
+            "order": 5,
+            "title": "8A - How to read p&id(pipe & instrument drawings)",
+            "resourceType": "video"
+        },
+        {
+            "settings": {
+                "disableSeek": false,
+                "disablePiP": false,
+                "disablePlaybackRate": false
+            },
+            "video": {
+                "fullPath": "courses/oztxiRZJ7qvzjrAHx0G8/resources/video-CAASm7oYi3.mp4",
+                "type": "upload",
+                "url": "https://firebasestorage.googleapis.com/v0/b/scormhero.appspot.com/o/courses%2FoztxiRZJ7qvzjrAHx0G8%2Fresources%2Fvideo-CAASm7oYi3.mp4?alt=media&token=8503c8e2-d7eb-4998-ab60-e375472b1bfd",
+                "name": "video-CAASm7oYi3.mp4"
+            },
+            "resourceId": "x8DEFBshyk",
+            "order": 6,
+            "title": "8A - Power Plant Controller (PPC)",
+            "resourceType": "video",
+            "closedCaption": {
+                "fullPath": "",
+                "name": "",
+                "url": ""
+            }
+        },
+        {
+            "resourceType": "video",
+            "title": "8A - Valves Symbols used in P&ID and Piping Isometric drawings - With Detail Explanation",
+            "order": 7,
+            "settings": {
+                "disablePiP": false,
+                "disablePlaybackRate": false,
+                "disableSeek": false
+            },
+            "video": {
+                "fullPath": "courses/oztxiRZJ7qvzjrAHx0G8/resources/video-EGxV2IHTKL.mp4",
+                "name": "video-EGxV2IHTKL.mp4",
+                "type": "upload",
+                "url": "https://firebasestorage.googleapis.com/v0/b/scormhero.appspot.com/o/courses%2FoztxiRZJ7qvzjrAHx0G8%2Fresources%2Fvideo-EGxV2IHTKL.mp4?alt=media&token=8b761fd2-d0ae-4e33-b331-1772f50dd58b"
+            },
+            "resourceId": "9z7StPmKjn",
+            "closedCaption": {
+                "name": "",
+                "fullPath": "",
+                "url": ""
+            }
+        },
+        {
+            "settings": {
+                "disableSeek": false,
+                "disablePlaybackRate": false,
+                "disablePiP": false
+            },
+            "video": {
+                "url": "https://firebasestorage.googleapis.com/v0/b/scormhero.appspot.com/o/courses%2FoztxiRZJ7qvzjrAHx0G8%2Fresources%2Fvideo-SbE8AUcepP.mp4?alt=media&token=24c3b17a-b425-4918-a57c-2e66e190efe3",
+                "fullPath": "courses/oztxiRZJ7qvzjrAHx0G8/resources/video-SbE8AUcepP.mp4",
+                "type": "upload",
+                "name": "video-SbE8AUcepP.mp4"
+            },
+            "title": "8A- Animation Functional Safety - SIL",
+            "resourceType": "video",
+            "resourceId": "MHtECEP1D3",
+            "closedCaption": {
+                "url": "",
+                "fullPath": "",
+                "name": ""
+            },
+            "order": 8
+        },
+        {
+            "resourceId": "1WT5Ol3ni2",
+            "closedCaption": {
+                "url": "",
+                "name": "",
+                "fullPath": ""
+            },
+            "video": {
+                "fullPath": "courses/oztxiRZJ7qvzjrAHx0G8/resources/video-LYuaQGOt0Y.mp4",
+                "type": "upload",
+                "name": "video-LYuaQGOt0Y.mp4",
+                "url": "https://firebasestorage.googleapis.com/v0/b/scormhero.appspot.com/o/courses%2FoztxiRZJ7qvzjrAHx0G8%2Fresources%2Fvideo-LYuaQGOt0Y.mp4?alt=media&token=4c304dcb-66b7-4be2-9645-9174b4d6bdb9"
+            },
+            "title": "8B - Ultrasonic flow measurement principle",
+            "resourceType": "video",
+            "settings": {
+                "disablePiP": false,
+                "disablePlaybackRate": false,
+                "disableSeek": false
+            },
+            "order": 9
+        },
+        {
+            "video": {
+                "name": "video-veigvfy7fR.mp4",
+                "url": "https://firebasestorage.googleapis.com/v0/b/scormhero.appspot.com/o/courses%2FoztxiRZJ7qvzjrAHx0G8%2Fresources%2Fvideo-veigvfy7fR.mp4?alt=media&token=cdb5d2d2-1693-46e0-8af7-29c0dd42ddce",
+                "type": "upload",
+                "fullPath": "courses/oztxiRZJ7qvzjrAHx0G8/resources/video-veigvfy7fR.mp4"
+            },
+            "order": 10,
+            "title": "8B - Understanding Differential Pressure Measurement- Differential Pressure Gauge Example",
+            "closedCaption": {
+                "url": "",
+                "fullPath": "",
+                "name": ""
+            },
+            "settings": {
+                "disablePiP": false,
+                "disableSeek": false,
+                "disablePlaybackRate": false
+            },
+            "resourceType": "video",
+            "resourceId": "I10Tvc2Xlm"
+        },
+        {
+            "settings": {
+                "disablePiP": false,
+                "disableSeek": false,
+                "disablePlaybackRate": false
+            },
+            "video": {
+                "fullPath": "courses/oztxiRZJ7qvzjrAHx0G8/resources/video-ynHABuMe0X.mp4",
+                "url": "https://firebasestorage.googleapis.com/v0/b/scormhero.appspot.com/o/courses%2FoztxiRZJ7qvzjrAHx0G8%2Fresources%2Fvideo-ynHABuMe0X.mp4?alt=media&token=8f5edde6-38ba-4b54-be32-d103b9e67314",
+                "name": "video-ynHABuMe0X.mp4",
+                "type": "upload"
+            },
+            "resourceType": "video",
+            "order": 11,
+            "closedCaption": {
+                "name": "",
+                "url": "",
+                "fullPath": ""
+            },
+            "title": "8B - What is a Pressure Sensor",
+            "resourceId": "fVr8zd0y8S"
+        },
+        {
+            "resourceId": "DFn9gtjYVg",
+            "video": {
+                "url": "https://firebasestorage.googleapis.com/v0/b/scormhero.appspot.com/o/courses%2FoztxiRZJ7qvzjrAHx0G8%2Fresources%2Fvideo-VMTEinDGk1.mp4?alt=media&token=e250c9ee-7649-42f7-b517-298209966e45",
+                "type": "upload",
+                "name": "video-VMTEinDGk1.mp4",
+                "fullPath": "courses/oztxiRZJ7qvzjrAHx0G8/resources/video-VMTEinDGk1.mp4"
+            },
+            "settings": {
+                "disablePiP": false,
+                "disablePlaybackRate": false,
+                "disableSeek": false
+            },
+            "closedCaption": {
+                "url": "",
+                "name": "",
+                "fullPath": ""
+            },
+            "order": 12,
+            "title": "8B - What is a pressure transmitter",
+            "resourceType": "video"
+        },
+        {
+            "settings": {
+                "disablePiP": false,
+                "disableSeek": false,
+                "disablePlaybackRate": false
+            },
+            "video": {
+                "url": "https://firebasestorage.googleapis.com/v0/b/scormhero.appspot.com/o/courses%2FoztxiRZJ7qvzjrAHx0G8%2Fresources%2Fvideo-ua1UM7BtUl.mp4?alt=media&token=4a4af29f-a067-4e98-b0d2-d3a557c57faa",
+                "fullPath": "courses/oztxiRZJ7qvzjrAHx0G8/resources/video-ua1UM7BtUl.mp4",
+                "name": "video-ua1UM7BtUl.mp4",
+                "type": "upload"
+            },
+            "title": "8B - What is a Rotameter and how does it work (Flow Measurement)",
+            "closedCaption": {
+                "name": "",
+                "fullPath": "",
+                "url": ""
+            },
+            "resourceType": "video",
+            "order": 13,
+            "resourceId": "nfZ6npbMWz"
+        },
+        {
+            "video": {
+                "type": "upload",
+                "url": "https://firebasestorage.googleapis.com/v0/b/scormhero.appspot.com/o/courses%2FoztxiRZJ7qvzjrAHx0G8%2Fresources%2Fvideo-5lYWQuI6KO.mp4?alt=media&token=c93c8b27-a94f-49e8-baf3-f21c736ac321",
+                "fullPath": "courses/oztxiRZJ7qvzjrAHx0G8/resources/video-5lYWQuI6KO.mp4",
+                "name": "video-5lYWQuI6KO.mp4"
+            },
+            "resourceType": "video",
+            "order": 14,
+            "title": "8B - What is a Temperature Sensor",
+            "resourceId": "7jACLT7Pws",
+            "closedCaption": {
+                "url": "",
+                "fullPath": "",
+                "name": ""
+            },
+            "settings": {
+                "disableSeek": false,
+                "disablePiP": false,
+                "disablePlaybackRate": false
+            }
+        },
+        {
+            "video": {
+                "type": "upload",
+                "url": "https://firebasestorage.googleapis.com/v0/b/scormhero.appspot.com/o/courses%2FoztxiRZJ7qvzjrAHx0G8%2Fresources%2Fvideo-r8iz7XEiYq.mp4?alt=media&token=b7991f13-7188-4403-a986-0d0030c5ffbf",
+                "fullPath": "courses/oztxiRZJ7qvzjrAHx0G8/resources/video-r8iz7XEiYq.mp4",
+                "name": "video-r8iz7XEiYq.mp4"
+            },
+            "resourceType": "video",
+            "order": 15,
+            "title": "8B - Flexim non-invasive ultrasonic flow meter - Water and wastewater flow measurement for buried pipe",
+            "resourceId": "qg25BBSy59",
+            "closedCaption": {
+                "url": "",
+                "fullPath": "",
+                "name": ""
+            },
+            "settings": {
+                "disableSeek": false,
+                "disablePiP": false,
+                "disablePlaybackRate": false
+            }
+        },
+        {
+            "video": {
+                "type": "upload",
+                "url": "https://firebasestorage.googleapis.com/v0/b/scormhero.appspot.com/o/courses%2FoztxiRZJ7qvzjrAHx0G8%2Fresources%2Fvideo-2qJRfw2xpA.mp4?alt=media&token=41bf5392-2f04-43be-b383-c2cfc8cc633d",
+                "fullPath": "courses/oztxiRZJ7qvzjrAHx0G8/resources/video-2qJRfw2xpA.mp4",
+                "name": "video-2qJRfw2xpA.mp4"
+            },
+            "resourceType": "video",
+            "order": 16,
+            "title": "8B - How Flow Meters Work",
+            "resourceId": "uuPkFn6RCY",
+            "closedCaption": {
+                "url": "",
+                "fullPath": "",
+                "name": ""
+            },
+            "settings": {
+                "disableSeek": false,
+                "disablePiP": false,
+                "disablePlaybackRate": false
+            }
+        },
+        {
+            "video": {
+                "type": "upload",
+                "url": "https://firebasestorage.googleapis.com/v0/b/scormhero.appspot.com/o/courses%2FoztxiRZJ7qvzjrAHx0G8%2Fresources%2Fvideo-szoi9pjUZP.mp4?alt=media&token=bee24193-0f32-43b7-acae-60495b439924",
+                "fullPath": "courses/oztxiRZJ7qvzjrAHx0G8/resources/video-szoi9pjUZP.mp4",
+                "name": "video-szoi9pjUZP.mp4"
+            },
+            "resourceType": "video",
+            "order": 17,
+            "title": "8B - How to Measure Flow Rate with a DP Transmitter",
+            "resourceId": "eCHFMoDGMd",
+            "closedCaption": {
+                "url": "",
+                "fullPath": "",
+                "name": ""
+            },
+            "settings": {
+                "disableSeek": false,
+                "disablePiP": false,
+                "disablePlaybackRate": false
+            }
+        },
+        {
+            "video": {
+                "type": "upload",
+                "url": "https://firebasestorage.googleapis.com/v0/b/scormhero.appspot.com/o/courses%2FoztxiRZJ7qvzjrAHx0G8%2Fresources%2Fvideo-89r1OEXFsm.mp4?alt=media&token=5ea2e259-fe13-4824-8cb2-93ddbdbcd832",
+                "fullPath": "courses/oztxiRZJ7qvzjrAHx0G8/resources/video-89r1OEXFsm.mp4",
+                "name": "video-89r1OEXFsm.mp4"
+            },
+            "resourceType": "video",
+            "order": 18,
+            "title": "8B - Measuring Principle Pressure",
+            "resourceId": "11y4bHI4bN",
+            "closedCaption": {
+                "url": "",
+                "fullPath": "",
+                "name": ""
+            },
+            "settings": {
+                "disableSeek": false,
+                "disablePiP": false,
+                "disablePlaybackRate": false
+            }
+        },
+        {
+            "video": {
+                "type": "upload",
+                "url": "https://firebasestorage.googleapis.com/v0/b/scormhero.appspot.com/o/courses%2FoztxiRZJ7qvzjrAHx0G8%2Fresources%2Fvideo-OXejgfIhs6.mp4?alt=media&token=975f5b04-ae99-40fb-8c7f-5d542437656f",
+                "fullPath": "courses/oztxiRZJ7qvzjrAHx0G8/resources/video-OXejgfIhs6.mp4",
+                "name": "video-OXejgfIhs6.mp4"
+            },
+            "resourceType": "video",
+            "order": 19,
+            "title": "8B - Pressure Measurements",
+            "resourceId": "cnwjCwxalv",
+            "closedCaption": {
+                "url": "",
+                "fullPath": "",
+                "name": ""
+            },
+            "settings": {
+                "disableSeek": false,
+                "disablePiP": false,
+                "disablePlaybackRate": false
+            }
+        },
+        {
+            "video": {
+                "type": "upload",
+                "url": "https://firebasestorage.googleapis.com/v0/b/scormhero.appspot.com/o/courses%2FoztxiRZJ7qvzjrAHx0G8%2Fresources%2Fvideo-E8DhjRMSIO.mp4?alt=media&token=facdd7ae-3ed7-4772-af4a-39a1ec5ef84c",
+                "fullPath": "courses/oztxiRZJ7qvzjrAHx0G8/resources/video-E8DhjRMSIO.mp4",
+                "name": "video-E8DhjRMSIO.mp4"
+            },
+            "resourceType": "video",
+            "order": 20,
+            "title": "8B - Temperature Sensors Explained",
+            "resourceId": "qaJdFdqdb2",
+            "closedCaption": {
+                "url": "",
+                "fullPath": "",
+                "name": ""
+            },
+            "settings": {
+                "disableSeek": false,
+                "disablePiP": false,
+                "disablePlaybackRate": false
+            }
+        },
+        {
+            "video": {
+                "type": "upload",
+                "url": "https://firebasestorage.googleapis.com/v0/b/scormhero.appspot.com/o/courses%2FoztxiRZJ7qvzjrAHx0G8%2Fresources%2Fvideo-jVb69z7vXe.mp4?alt=media&token=85496162-69c0-4dd6-934d-ad7438aa68d6",
+                "fullPath": "courses/oztxiRZJ7qvzjrAHx0G8/resources/video-jVb69z7vXe.mp4",
+                "name": "video-jVb69z7vXe.mp4"
+            },
+            "resourceType": "video",
+            "order": 21,
+            "title": "8B - Types of Sensors",
+            "resourceId": "DMeh6lb7XZ",
+            "closedCaption": {
+                "url": "",
+                "fullPath": "",
+                "name": ""
+            },
+            "settings": {
+                "disableSeek": false,
+                "disablePiP": false,
+                "disablePlaybackRate": false
+            }
+        },
+        {
+            "video": {
+                "type": "upload",
+                "url": "https://firebasestorage.googleapis.com/v0/b/scormhero.appspot.com/o/courses%2FoztxiRZJ7qvzjrAHx0G8%2Fresources%2Fvideo-uTdFZpMqkI.mp4?alt=media&token=43c48dc4-d267-4ac5-9021-4485d8b462cb",
+                "fullPath": "courses/oztxiRZJ7qvzjrAHx0G8/resources/video-uTdFZpMqkI.mp4",
+                "name": "video-uTdFZpMqkI.mp4"
+            },
+            "resourceType": "video",
+            "order": 22,
+            "title": "8C - SIMATIC PCS 7 Tutorial - New standards in process control - Siemens",
+            "resourceId": "t7feKVboQq",
+            "closedCaption": {
+                "url": "",
+                "fullPath": "",
+                "name": ""
+            },
+            "settings": {
+                "disableSeek": false,
+                "disablePiP": false,
+                "disablePlaybackRate": false
+            }
+        },
+        {
+            "video": {
+                "type": "upload",
+                "url": "https://firebasestorage.googleapis.com/v0/b/scormhero.appspot.com/o/courses%2FoztxiRZJ7qvzjrAHx0G8%2Fresources%2Fvideo-UFzN4BE9ha.mp4?alt=media&token=1c882ec0-4fef-4c6d-8a70-548b90798fb5",
+                "fullPath": "courses/oztxiRZJ7qvzjrAHx0G8/resources/video-UFzN4BE9ha.mp4",
+                "name": "video-UFzN4BE9ha.mp4"
+            },
+            "resourceType": "video",
+            "order": 23,
+            "title": "8C - What are the Major PLC Manufacturers",
+            "resourceId": "RAnmKqgber",
+            "closedCaption": {
+                "url": "",
+                "fullPath": "",
+                "name": ""
+            },
+            "settings": {
+                "disableSeek": false,
+                "disablePiP": false,
+                "disablePlaybackRate": false
+            }
+        },
+        {
+            "video": {
+                "type": "upload",
+                "url": "https://firebasestorage.googleapis.com/v0/b/scormhero.appspot.com/o/courses%2FoztxiRZJ7qvzjrAHx0G8%2Fresources%2Fvideo-WSi2xdisel.mp4?alt=media&token=20c98faa-40f9-46db-9558-afa021eeeaa9",
+                "fullPath": "courses/oztxiRZJ7qvzjrAHx0G8/resources/video-WSi2xdisel.mp4",
+                "name": "video-WSi2xdisel.mp4"
+            },
+            "resourceType": "video",
+            "order": 24,
+            "title": "8C - What is a PLC",
+            "resourceId": "ek5hHAB1Pv",
+            "closedCaption": {
+                "url": "",
+                "fullPath": "",
+                "name": ""
+            },
+            "settings": {
+                "disableSeek": false,
+                "disablePiP": false,
+                "disablePlaybackRate": false
+            }
+        },
+        {
+            "video": {
+                "type": "upload",
+                "url": "https://firebasestorage.googleapis.com/v0/b/scormhero.appspot.com/o/courses%2FoztxiRZJ7qvzjrAHx0G8%2Fresources%2Fvideo-pB7aVziCUV.mp4?alt=media&token=9c6f0e26-c1f3-4cc8-bb53-89bc66506f29",
+                "fullPath": "courses/oztxiRZJ7qvzjrAHx0G8/resources/video-pB7aVziCUV.mp4",
+                "name": "video-pB7aVziCUV.mp4"
+            },
+            "resourceType": "video",
+            "order": 25,
+            "title": "8C - What is an Electrical Control Panel (PLC Panel Basics)",
+            "resourceId": "VgOuVkYWuk",
+            "closedCaption": {
+                "url": "",
+                "fullPath": "",
+                "name": ""
+            },
+            "settings": {
+                "disableSeek": false,
+                "disablePiP": false,
+                "disablePlaybackRate": false
+            }
+        },
+        {
+            "video": {
+                "type": "upload",
+                "url": "https://firebasestorage.googleapis.com/v0/b/scormhero.appspot.com/o/courses%2FoztxiRZJ7qvzjrAHx0G8%2Fresources%2Fvideo-VaSesnnhS0.mp4?alt=media&token=c582919e-0e0b-4e79-86a2-af90d2fec458",
+                "fullPath": "courses/oztxiRZJ7qvzjrAHx0G8/resources/video-VaSesnnhS0.mp4",
+                "name": "video-VaSesnnhS0.mp4"
+            },
+            "resourceType": "video",
+            "order": 26,
+            "title": "8C - What is Ladder Logic",
+            "resourceId": "hYlBe3xJnU",
+            "closedCaption": {
+                "url": "",
+                "fullPath": "",
+                "name": ""
+            },
+            "settings": {
+                "disableSeek": false,
+                "disablePiP": false,
+                "disablePlaybackRate": false
+            }
+        },
+        {
+            "video": {
+                "type": "upload",
+                "url": "https://firebasestorage.googleapis.com/v0/b/scormhero.appspot.com/o/courses%2FoztxiRZJ7qvzjrAHx0G8%2Fresources%2Fvideo-oHfB0Bnnb1.mp4?alt=media&token=3f8c0eff-f551-4a77-995d-2cc7b41c7c82",
+                "fullPath": "courses/oztxiRZJ7qvzjrAHx0G8/resources/video-oHfB0Bnnb1.mp4",
+                "name": "video-oHfB0Bnnb1.mp4"
+            },
+            "resourceType": "video",
+            "order": 27,
+            "title": "8C - What is PLC and how does it work",
+            "resourceId": "t5xUaLHZ9P",
+            "closedCaption": {
+                "url": "",
+                "fullPath": "",
+                "name": ""
+            },
+            "settings": {
+                "disableSeek": false,
+                "disablePiP": false,
+                "disablePlaybackRate": false
+            }
+        },
+        {
+            "video": {
+                "type": "upload",
+                "url": "https://firebasestorage.googleapis.com/v0/b/scormhero.appspot.com/o/courses%2FoztxiRZJ7qvzjrAHx0G8%2Fresources%2Fvideo-xXu1a24lMk.mp4?alt=media&token=8adafbd6-4bd0-4d0e-9b09-e92f6c067045",
+                "fullPath": "courses/oztxiRZJ7qvzjrAHx0G8/resources/video-xXu1a24lMk.mp4",
+                "name": "video-xXu1a24lMk.mp4"
+            },
+            "resourceType": "video",
+            "order": 28,
+            "title": "8C - Introduction to PLC Automation - What is a PLC",
+            "resourceId": "st8OM64NS0",
+            "closedCaption": {
+                "url": "",
+                "fullPath": "",
+                "name": ""
+            },
+            "settings": {
+                "disableSeek": false,
+                "disablePiP": false,
+                "disablePlaybackRate": false
+            }
+        },
+        {
+            "video": {
+                "type": "upload",
+                "url": "https://firebasestorage.googleapis.com/v0/b/scormhero.appspot.com/o/courses%2FoztxiRZJ7qvzjrAHx0G8%2Fresources%2Fvideo-MJUMjbqG2X.mp4?alt=media&token=db9a8d93-d312-4e31-94ab-947e4a69400f",
+                "fullPath": "courses/oztxiRZJ7qvzjrAHx0G8/resources/video-MJUMjbqG2X.mp4",
+                "name": "video-MJUMjbqG2X.mp4"
+            },
+            "resourceType": "video",
+            "order": 29,
+            "title": "8C - PLC - Introduction - Programmable logic controllers - Steps towards Automation - 01",
+            "resourceId": "stz6cNv8ft",
+            "closedCaption": {
+                "url": "",
+                "fullPath": "",
+                "name": ""
+            },
+            "settings": {
+                "disableSeek": false,
+                "disablePiP": false,
+                "disablePlaybackRate": false
+            }
+        },
+        {
+            "video": {
+                "type": "upload",
+                "url": "https://firebasestorage.googleapis.com/v0/b/scormhero.appspot.com/o/courses%2FoztxiRZJ7qvzjrAHx0G8%2Fresources%2Fvideo-2Q3ocDqKiY.mp4?alt=media&token=e3c5fd4e-e7c7-4133-9a56-2001c479b35d",
+                "fullPath": "courses/oztxiRZJ7qvzjrAHx0G8/resources/video-2Q3ocDqKiY.mp4",
+                "name": "video-2Q3ocDqKiY.mp4"
+            },
+            "resourceType": "video",
+            "order": 30,
+            "title": "8C - PLC Basics - Programmable Logic Controller",
+            "resourceId": "Jxn5Z6C8Cw",
+            "closedCaption": {
+                "url": "",
+                "fullPath": "",
+                "name": ""
+            },
+            "settings": {
+                "disableSeek": false,
+                "disablePiP": false,
+                "disablePlaybackRate": false
+            }
+        },
+        {
+            "video": {
+                "type": "upload",
+                "url": "https://firebasestorage.googleapis.com/v0/b/scormhero.appspot.com/o/courses%2FoztxiRZJ7qvzjrAHx0G8%2Fresources%2Fvideo-z4H8d085ul.mp4?alt=media&token=3c9fbf94-b572-462e-920c-415aa65c89a5",
+                "fullPath": "courses/oztxiRZJ7qvzjrAHx0G8/resources/video-z4H8d085ul.mp4",
+                "name": "video-z4H8d085ul.mp4"
+            },
+            "resourceType": "video",
+            "order": 31,
+            "title": "8C - PLC Ladder programming - NO NC contacts - AND gate logic",
+            "resourceId": "EANoRLownK",
+            "closedCaption": {
+                "url": "",
+                "fullPath": "",
+                "name": ""
+            },
+            "settings": {
+                "disableSeek": false,
+                "disablePiP": false,
+                "disablePlaybackRate": false
+            }
+        },
+        {
+            "video": {
+                "type": "upload",
+                "url": "https://firebasestorage.googleapis.com/v0/b/scormhero.appspot.com/o/courses%2FoztxiRZJ7qvzjrAHx0G8%2Fresources%2Fvideo-Z4NRsBat3U.mp4?alt=media&token=0185ce0a-4415-4fc4-84b9-e1947f05f821",
+                "fullPath": "courses/oztxiRZJ7qvzjrAHx0G8/resources/video-Z4NRsBat3U.mp4",
+                "name": "video-Z4NRsBat3U.mp4"
+            },
+            "resourceType": "video",
+            "order": 32,
+            "title": "8C - PLC Program Language",
+            "resourceId": "A50hr4Q1TU",
+            "closedCaption": {
+                "url": "",
+                "fullPath": "",
+                "name": ""
+            },
+            "settings": {
+                "disableSeek": false,
+                "disablePiP": false,
+                "disablePlaybackRate": false
+            }
+        },
+        {
+            "video": {
+                "type": "upload",
+                "url": "https://firebasestorage.googleapis.com/v0/b/scormhero.appspot.com/o/courses%2FoztxiRZJ7qvzjrAHx0G8%2Fresources%2Fvideo-IEVwfL4KgB.mp4?alt=media&token=7a6bd195-7869-44db-b9ef-7bd86dddfc20",
+                "fullPath": "courses/oztxiRZJ7qvzjrAHx0G8/resources/video-IEVwfL4KgB.mp4",
+                "name": "video-IEVwfL4KgB.mp4"
+            },
+            "resourceType": "video",
+            "order": 33,
+            "title": "8D - Gas Turbine Control System",
+            "resourceId": "8FYTwNWvRW",
+            "closedCaption": {
+                "url": "",
+                "fullPath": "",
+                "name": ""
+            },
+            "settings": {
+                "disableSeek": false,
+                "disablePiP": false,
+                "disablePlaybackRate": false
+            }
+        },
+        {
+            "video": {
+                "type": "upload",
+                "url": "https://firebasestorage.googleapis.com/v0/b/scormhero.appspot.com/o/courses%2FoztxiRZJ7qvzjrAHx0G8%2Fresources%2Fvideo-QtjN3oyzo9.mp4?alt=media&token=abd8f35d-012f-4625-8794-ef4b391dbd46",
+                "fullPath": "courses/oztxiRZJ7qvzjrAHx0G8/resources/video-QtjN3oyzo9.mp4",
+                "name": "video-QtjN3oyzo9.mp4"
+            },
+            "resourceType": "video",
+            "order": 34,
+            "title": "8D - GE Controller Migration",
+            "resourceId": "bZj7d9hxFp",
+            "closedCaption": {
+                "url": "",
+                "fullPath": "",
+                "name": ""
+            },
+            "settings": {
+                "disableSeek": false,
+                "disablePiP": false,
+                "disablePlaybackRate": false
+            }
+        },
+        {
+            "video": {
+                "type": "upload",
+                "url": "https://firebasestorage.googleapis.com/v0/b/scormhero.appspot.com/o/courses%2FoztxiRZJ7qvzjrAHx0G8%2Fresources%2Fvideo-wopDcN3dxi.mp4?alt=media&token=4f239120-7968-440e-87b2-520642f1e7aa",
+                "fullPath": "courses/oztxiRZJ7qvzjrAHx0G8/resources/video-wopDcN3dxi.mp4",
+                "name": "video-wopDcN3dxi.mp4"
+            },
+            "resourceType": "video",
+            "order": 35,
+            "title": "8D - GE- Mark VIe Control Platform",
+            "resourceId": "atNTZaGWzK",
+            "closedCaption": {
+                "url": "",
+                "fullPath": "",
+                "name": ""
+            },
+            "settings": {
+                "disableSeek": false,
+                "disablePiP": false,
+                "disablePlaybackRate": false
+            }
+        },
+        {
+            "video": {
+                "type": "upload",
+                "url": "https://firebasestorage.googleapis.com/v0/b/scormhero.appspot.com/o/courses%2FoztxiRZJ7qvzjrAHx0G8%2Fresources%2Fvideo-id1Ove6McO.mp4?alt=media&token=7ac4bec1-6326-4993-9a72-a37f8ba93922",
+                "fullPath": "courses/oztxiRZJ7qvzjrAHx0G8/resources/video-id1Ove6McO.mp4",
+                "name": "video-id1Ove6McO.mp4"
+            },
+            "resourceType": "video",
+            "order": 36,
+            "title": "8D - PID Control - A brief introduction",
+            "resourceId": "wpCm37Q2aj",
+            "closedCaption": {
+                "url": "",
+                "fullPath": "",
+                "name": ""
+            },
+            "settings": {
+                "disableSeek": false,
+                "disablePiP": false,
+                "disablePlaybackRate": false
+            }
+        },
+        {
+            "video": {
+                "type": "upload",
+                "url": "https://firebasestorage.googleapis.com/v0/b/scormhero.appspot.com/o/courses%2FoztxiRZJ7qvzjrAHx0G8%2Fresources%2Fvideo-NIOJA5YFdn.mp4?alt=media&token=bc132381-b22c-434a-962c-6bb0ba916482",
+                "fullPath": "courses/oztxiRZJ7qvzjrAHx0G8/resources/video-NIOJA5YFdn.mp4",
+                "name": "video-NIOJA5YFdn.mp4"
+            },
+            "resourceType": "video",
+            "order": 37,
+            "title": "8D - Process control & instrumentation - Ratio control",
+            "resourceId": "SrN9n9V3Df",
+            "closedCaption": {
+                "url": "",
+                "fullPath": "",
+                "name": ""
+            },
+            "settings": {
+                "disableSeek": false,
+                "disablePiP": false,
+                "disablePlaybackRate": false
+            }
+        },
+        {
+            "video": {
+                "type": "upload",
+                "url": "https://firebasestorage.googleapis.com/v0/b/scormhero.appspot.com/o/courses%2FoztxiRZJ7qvzjrAHx0G8%2Fresources%2Fvideo-Hal8P8pcwm.mp4?alt=media&token=68724d84-9c32-4ad8-a7c3-8feaafebb117",
+                "fullPath": "courses/oztxiRZJ7qvzjrAHx0G8/resources/video-Hal8P8pcwm.mp4",
+                "name": "video-Hal8P8pcwm.mp4"
+            },
+            "resourceType": "video",
+            "order": 38,
+            "title": "8D - SINAMICS V90 - Servo drive system for motion control applications",
+            "resourceId": "I3KNP8De62",
+            "closedCaption": {
+                "url": "",
+                "fullPath": "",
+                "name": ""
+            },
+            "settings": {
+                "disableSeek": false,
+                "disablePiP": false,
+                "disablePlaybackRate": false
+            }
+        },
+        {
+            "video": {
+                "type": "upload",
+                "url": "https://firebasestorage.googleapis.com/v0/b/scormhero.appspot.com/o/courses%2FoztxiRZJ7qvzjrAHx0G8%2Fresources%2Fvideo-gcEaPOr8EI.mp4?alt=media&token=2dd33083-71cc-4da9-8b51-2bfde85bfcd1",
+                "fullPath": "courses/oztxiRZJ7qvzjrAHx0G8/resources/video-gcEaPOr8EI.mp4",
+                "name": "video-gcEaPOr8EI.mp4"
+            },
+            "resourceType": "video",
+            "order": 39,
+            "title": "8D - The most efficient power plant in the world runs with ABB Symphony Plus",
+            "resourceId": "6OBLmAmtNa",
+            "closedCaption": {
+                "url": "",
+                "fullPath": "",
+                "name": ""
+            },
+            "settings": {
+                "disableSeek": false,
+                "disablePiP": false,
+                "disablePlaybackRate": false
+            }
+        },
+        {
+            "video": {
+                "type": "upload",
+                "url": "https://firebasestorage.googleapis.com/v0/b/scormhero.appspot.com/o/courses%2FoztxiRZJ7qvzjrAHx0G8%2Fresources%2Fvideo-MpR5gHWb9m.mp4?alt=media&token=49a27889-a3b1-4e88-bc60-d33b6cdbb3f1",
+                "fullPath": "courses/oztxiRZJ7qvzjrAHx0G8/resources/video-MpR5gHWb9m.mp4",
+                "name": "video-MpR5gHWb9m.mp4"
+            },
+            "resourceType": "video",
+            "order": 40,
+            "title": "8D - What is a PID Controller",
+            "resourceId": "CagZs5egJu",
+            "closedCaption": {
+                "url": "",
+                "fullPath": "",
+                "name": ""
+            },
+            "settings": {
+                "disableSeek": false,
+                "disablePiP": false,
+                "disablePlaybackRate": false
+            }
+        },
+        {
+            "video": {
+                "type": "upload",
+                "url": "https://firebasestorage.googleapis.com/v0/b/scormhero.appspot.com/o/courses%2FoztxiRZJ7qvzjrAHx0G8%2Fresources%2Fvideo-vgyH5YZCCA.mp4?alt=media&token=44177e12-2bfd-461a-8570-532fb288d304",
+                "fullPath": "courses/oztxiRZJ7qvzjrAHx0G8/resources/video-vgyH5YZCCA.mp4",
+                "name": "video-vgyH5YZCCA.mp4"
+            },
+            "resourceType": "video",
+            "order": 41,
+            "title": "8D - Alstom Grid DS Agile Digital Control System 2014",
+            "resourceId": "lmciW8iPJD",
+            "closedCaption": {
+                "url": "",
+                "fullPath": "",
+                "name": ""
+            },
+            "settings": {
+                "disableSeek": false,
+                "disablePiP": false,
+                "disablePlaybackRate": false
+            }
+        },
+        {
+            "video": {
+                "type": "upload",
+                "url": "https://firebasestorage.googleapis.com/v0/b/scormhero.appspot.com/o/courses%2FoztxiRZJ7qvzjrAHx0G8%2Fresources%2Fvideo-81qLyPMM7A.mp4?alt=media&token=86147ed8-8b18-4ea2-8281-5b8eb7035630",
+                "fullPath": "courses/oztxiRZJ7qvzjrAHx0G8/resources/video-81qLyPMM7A.mp4",
+                "name": "video-81qLyPMM7A.mp4"
+            },
+            "resourceType": "video",
+            "order": 42,
+            "title": "8D - Distributed Control Systems - Introduction",
+            "resourceId": "mraX9o9scV",
+            "closedCaption": {
+                "url": "",
+                "fullPath": "",
+                "name": ""
+            },
+            "settings": {
+                "disableSeek": false,
+                "disablePiP": false,
+                "disablePlaybackRate": false
+            }
+        },
+        {
+            "video": {
+                "type": "upload",
+                "url": "https://firebasestorage.googleapis.com/v0/b/scormhero.appspot.com/o/courses%2FoztxiRZJ7qvzjrAHx0G8%2Fresources%2Fvideo-WfISIpeL3n.mp4?alt=media&token=4d91c979-7a7b-4646-9503-75aaa6f3f40f",
+                "fullPath": "courses/oztxiRZJ7qvzjrAHx0G8/resources/video-WfISIpeL3n.mp4",
+                "name": "video-WfISIpeL3n.mp4"
+            },
+            "resourceType": "video",
+            "order": 43,
+            "title": "8E - Instrumentation How Control Valve Works",
+            "resourceId": "zCnJLq9mua",
+            "closedCaption": {
+                "url": "",
+                "fullPath": "",
+                "name": ""
+            },
+            "settings": {
+                "disableSeek": false,
+                "disablePiP": false,
+                "disablePlaybackRate": false
+            }
+        }
+    ],
+    "colorScheme": {
+        "primary": "#575757",
+        "mediaBackground": "#ffffff"
+    },
+    "modifiedAt": 1752806600605,
+    "createdAt": "2025-07-17T07:11:29.601Z",
+    "ownerId": "1gFiVMGdOEOBJcJSDEZfx0xsfgZ2",
+    "available": true,
+    "courseId": "oztxiRZJ7qvzjrAHx0G8",
+    "baseURL": "./assets",
+    "settings": {
+        "showCloseCourseButton": false,
+        "hideProgressBar": false,
+        "navigationMode": "free"
+    },
+    "folderId": null
+}
