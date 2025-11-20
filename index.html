@@ -44,37 +44,39 @@
         <p>An error occured. Please refresh page.</p>
     </div>
 
-    <div class="container h-100">
+    <div class="container-fluid d-flex h-100 flex-column">
         <div class="row">
             <h1>SCORMVERTER</h1>
         </div>
-        <div class="row h-100">
-            <div class="col border">
+        <div class="row flex-grow-1">
+            <div class="col border p-3 rounded">
                 <h5>Input files</h5>
-                <ul id="inputlist" class="list-group border">
+                <ul id="inputlist" class="list-group border h-75">
                 </ul>
             </div>
-            <div class="col border d-flex flex-column">
+            <div class="col border p-3 rounded d-flex flex-column">
                 <form id="data-form">
                     <div class="input-group mb-3">
                         <span class="input-group-text">Title</span>
                         <input id="course_title" type="text" class="form-control" placeholder="Course Title" required>
                     </div>
                     <div class="input-group mb-3">
-                        <label class="input-group-text" for="file_picker">Folder</label>
                         <input id="file_picker" type="file" class="form-control" webkitdirectory directory multiple>
+                        <label class="input-group-text" for="file_picker">Folder</label>
                     </div>
                     <div class="input-group mb-3">
-                        <label class="input-group-text" for="logo_picker">Logo</label>
                         <input id="logo_picker" type="file" class="form-control" accept="image/*" required>
+                        <label class="input-group-text" for="logo_picker">Logo</label>
                     </div>
                     <div class="input-group mb-3">
                         <span class="input-group-text">Primary Color</span>
-                        <input type="color" id="primary_color" name="primary_color" value="#575757" />
+                        <input type="color" id="primary_color" class="form-control form-control-color"
+                            name="primary_color" value="#575757" />
                     </div>
                     <div class="input-group mb-3">
                         <span class="input-group-text">Background Color</span>
-                        <input type="color" id="bg_color" name="bg_color" value="#FFFFFF" />
+                        <input type="color" id="bg_color" class="form-control form-control-color" name="bg_color"
+                            value="#FFFFFF" />
                     </div>
                     <div class="mb-3">
                         <button id="add_all_output" type="button" class="btn btn-secondary">Move all to Output</button>
@@ -91,14 +93,18 @@
                         <div id="progress" class="progress-bar progress-bar-striped progress-bar-animated"
                             role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
                     </div>
+                    <p id="progress_text"></p>
                 </div>
                 <div class="mb-3">
                     <h5>Instructions</h5>
                     <ol>
                         <li>Click "Choose Files" and select a folder.</li>
-                        <li>When the mp4 files are loaded, click "Move all to Output" or move individual items from the
-                            "Input files" list to "Output files", and vice versa.</li>
-                        <li>Enter the title of the file</li>
+                        <li>All mp4 files will be loaded to the "Input files" tab.</li>
+                        <li>Drag-and-drop files from "Input files" to "Output files" to include them in the SCORM.</li>
+                        <li>You can also use the "Move all to Output" and "Move all to Input" button to move items
+                            around.</li>
+                        <li>Use the trash icon to remove the file.</li>
+                        <li>Enter the title and select the logo.</li>
                         <li>Click "Generate".</li>
                     </ol>
                 </div>
@@ -113,9 +119,9 @@
                     </ul>
                 </div>
             </div>
-            <div class="col border">
+            <div class="col border p-3 rounded">
                 <h5>Output files</h5>
-                <ul id="outputlist" class="list-group border">
+                <ul id="outputlist" class="list-group border h-75">
                 </ul>
             </div>
         </div>
@@ -187,24 +193,24 @@
         }
 
         // add file object into zip
-        function addFileObj(zip, name, file) {
-            return new Promise((res, rej) => {
-                const callback = buffer => {
-                    const zipFile = new fflate.AsyncZipDeflate(name, { level: 9 });
-                    zip.add(zipFile);
-                    zipFile.push(buffer, true);
-                    res();
-                };
+        async function addFileObj(zip, name, file) {
+            const zipFile = new fflate.AsyncZipDeflate(name, { level: 9 });
+            zip.add(zipFile);
 
-                if (file instanceof Uint8Array) {
-                    callback(file);
-                } else {
-                    const reader = new FileReader();
-                    reader.onload = () => callback(new Uint8Array(reader.result));
-                    reader.onerror = (e) => rej(e);
-                    reader.readAsArrayBuffer(file);
+            if (file instanceof File) {
+                const reader = file.stream().getReader();
+                while (true) {
+                    const result = await reader.read();
+                    if (!result.done) {
+                        zipFile.push(result.value)
+                    } else {
+                        zipFile.push(new Uint8Array(0), true);
+                        break;
+                    }
                 }
-            });
+            } else {
+                zipFile.push(file, true);
+            }
         }
 
         // copy uint8Array
@@ -225,8 +231,9 @@
             return id;
         }
 
-        function setProgress(progress) {
+        function setProgress(progress, text) {
             document.getElementById('progress').style.width = `${progress * 100}%`;
+            document.getElementById('progress_text').textContent = text ? text : '';
         }
 
 
@@ -321,33 +328,55 @@
                 }))
             };
 
-            const zipOutput = [];
-            const zip = new fflate.Zip((err, dat, final) => {
-                if (!err) {
-                    zipOutput.push(dat);
-                }
-                if (final) {
+            let writeChunk = (buffer) => { };
+            let closeFile = () => { };
+            if (window.showSaveFilePicker !== undefined) {
+                const outputFile = await window.showSaveFilePicker({
+                    types: [{ description: 'Compressed Archive', accept: { "application/zip": ['.zip'] } }],
+                    suggestedName: `${courseTitle}.zip`,
+                    startIn: 'downloads'
+                });
+                const outputStream = await outputFile.createWritable({ mode: 'exclusive' });
+                writeChunk = (buffer) => outputStream.write(buffer);
+                closeFile = () => outputStream.close();
+            } else {
+                const zipOutput = [];
+                writeChunk = (buffer) => Promise.resolve(zipOutput.push(buffer));
+                closeFile = () => {
                     const blob = new Blob(zipOutput, { type: 'application/octet-stream' });
                     const downloadLink = document.createElement('a');
                     const objUrl = URL.createObjectURL(blob);
                     downloadLink.href = objUrl;
                     downloadLink.download = `${courseTitle}.zip`;
                     downloadLink.click();
-                    setProgress(0);
                     setTimeout(() => URL.revokeObjectURL(objUrl), 50 * 60);
+                };
+            }
+
+            const writePromises = [];
+            const zip = new fflate.Zip((err, dat, final) => {
+                if (!err) {
+                    writePromises.push(writeChunk(dat));
+                }
+                if (final) {
+                    Promise.all(writePromises)
+                        .then(() => closeFile())
+                        .then(() => setProgress(0, 'Downloaded.'));
                 }
             });
 
-            let totalFiles = assetList.length + files.length + 3;
+            setProgress(0, 'Starting...')
+            const assetFiles = assetList.length + 3;
+            let totalFiles = assetFiles + files.length;
             // add icon
-            addFileObj(zip, 'assets/logo.png', document.getElementById('logo_picker').files[0]);
+            await addFileObj(zip, 'assets/logo.png', document.getElementById('logo_picker').files[0]);
             // add all script files in first
             await Promise.all(assetList.filter(path => excludeAssetList[path] !== true).map(path => addFileObj(zip, path, copyUint8Array(assetMap[path]))));
             // add manifest XML
             await addFileObj(zip, 'imsmanifest.xml', new TextEncoder().encode(manifestXml));
             // add manifest JSON
             await addFileObj(zip, 'data/course.json', new TextEncoder().encode(JSON.stringify(manifestJson)));
-            setProgress((assetList.length + 2) / totalFiles);
+            setProgress(assetFiles / totalFiles, 'Assets added...');
             // add videos
             let i = 0;
             while (files.length) {
@@ -355,7 +384,7 @@
                 const processFiles = files.splice(-parallelCount, parallelCount);
                 await Promise.all(processFiles.map(file => addFileObj(zip, `assets/${file.id}`, file.file)));
                 i += parallelCount;
-                setProgress((assetList.length + 2 + i) / totalFiles);
+                setProgress((assetFiles + i) / totalFiles, `Processing: ${processFiles[0].name}`);
             }
             zip.end();
         });
