@@ -277,6 +277,7 @@
                     .replace(/>/g, "&gt;")
                     .replace(/"/g, "&quot;")
                     .replace(/'/g, "&apos;");
+            const courseTitleEscaped = courseTitle.replace(/[^A-Za-z0_9]/g, '_');
             const manifestXml = new TextDecoder().decode(assetMap['imsmanifest.xml']).replace(/{{ COURSE_TITLE }}/g, courseTitleXml);
             const manifestJson = {
                 "language": "en-US",
@@ -347,7 +348,7 @@
                     const downloadLink = document.createElement('a');
                     const objUrl = URL.createObjectURL(blob);
                     downloadLink.href = objUrl;
-                    downloadLink.download = `${courseTitle}.zip`;
+                    downloadLink.download = `${courseTitleEscaped}.zip`;
                     downloadLink.click();
                     setTimeout(() => URL.revokeObjectURL(objUrl), 50 * 60);
                 };
