@@ -51,33 +51,67 @@
         <div class="row flex-grow-1">
             <div class="col border p-3 rounded">
                 <h5>Input files</h5>
+                <div class="input-group mb-3">
+                    <input id="file_picker" type="file" class="form-control" webkitdirectory directory multiple>
+                </div>
                 <ul id="inputlist" class="list-group border h-75">
                 </ul>
             </div>
+
+            <div class="col border p-3 rounded">
+                <h5>Output files</h5>
+                <div class="input-group mb-3 invisible">
+                    <input type="file" class="form-control" webkitdirectory directory multiple>
+                </div>
+                <ul id="outputlist" class="list-group border h-75">
+                </ul>
+            </div>
+
+
             <div class="col border p-3 rounded d-flex flex-column">
                 <form id="data-form">
                     <div class="input-group mb-3">
                         <span class="input-group-text">Title</span>
                         <input id="course_title" type="text" class="form-control" placeholder="Course Title" required>
                     </div>
+
                     <div class="input-group mb-3">
-                        <input id="file_picker" type="file" class="form-control" webkitdirectory directory multiple>
-                        <label class="input-group-text" for="file_picker">Folder</label>
-                    </div>
-                    <div class="input-group mb-3">
-                        <input id="logo_picker" type="file" class="form-control" accept="image/*" required>
                         <label class="input-group-text" for="logo_picker">Logo</label>
+                        <input id="logo_picker" type="file" class="form-control" accept="image/*" required>
                     </div>
-                    <div class="input-group mb-3">
-                        <span class="input-group-text">Primary Color</span>
-                        <input type="color" id="primary_color" class="form-control form-control-color"
-                            name="primary_color" value="#575757" />
+
+                    <div class="row mb-3">
+                        <div class="col input-group">
+                            <span class="input-group-text" for="primary_color">Primary Color</span>
+                            <input type="color" id="primary_color" class="form-control form-control-color"
+                                name="primary_color" value="#575757" />
+                        </div>
+
+                        <div class="col input-group">
+                            <span class="input-group-text" for="bg_color">Background Color</span>
+                            <input type="color" id="bg_color" class="form-control form-control-color" name="bg_color"
+                                value="#FFFFFF" />
+                        </div>
                     </div>
-                    <div class="input-group mb-3">
-                        <span class="input-group-text">Background Color</span>
-                        <input type="color" id="bg_color" class="form-control form-control-color" name="bg_color"
-                            value="#FFFFFF" />
+
+                    <div class="form-check mb-3">
+                        <input type="checkbox" id="disable_navigation" class="form-check-input"
+                            name="disable_navigation" checked />
+                        <span class="form-check-label" for="disable_navigation">Disable Previous / Next</span>
                     </div>
+
+                    <div class="form-check mb-3">
+                        <input type="checkbox" id="disable_seeking" class="form-check-input" name="disable_seeking"
+                            checked />
+                        <span class="form-check-label" for="disable_seeking">Disable video seek</span>
+                    </div>
+
+                    <div class="form-check mb-3">
+                        <input type="checkbox" id="disable_speed_change" class="form-check-input"
+                            name="disable_speed_change" checked />
+                        <span class="form-check-label" for="disable_speed_change">Disable Video Speed</span>
+                    </div>
+
                     <div class="mb-3">
                         <button id="add_all_output" type="button" class="btn btn-secondary">Move all to Output</button>
                         <button id="add_all_input" type="button" class="btn btn-secondary">Move all to Input</button>
@@ -119,11 +153,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="col border p-3 rounded">
-                <h5>Output files</h5>
-                <ul id="outputlist" class="list-group border h-75">
-                </ul>
-            </div>
+
         </div>
     </div>
 
@@ -300,7 +330,7 @@
                 "settings": {
                     "showCloseCourseButton": false,
                     "hideProgressBar": false,
-                    "navigationMode": "free"
+                    "navigationMode": document.getElementById('disable_navigation').checked ? "disabled" : "free"
                 },
                 "folderId": null,
                 "pages": files.map((file, index) => ({
@@ -314,8 +344,8 @@
                     "resourceId": randomId(),
                     "title": file.name,
                     "settings": {
-                        "disablePlaybackRate": false,
-                        "disableSeek": false,
+                        "disablePlaybackRate": document.getElementById('disable_speed_change').checked,
+                        "disableSeek": document.getElementById('disable_seeking').checked,
                         "disablePiP": false
                     },
                     "video": {
