@@ -373,7 +373,7 @@
         }
 
         // register service worker for preview
-        navigator.serviceWorker.register('./sw.js', { scope: '/scormverter' })
+        navigator.serviceWorker.register('./sw.js', { scope: window.location.pathname })
             .then((registration) => {
                 document.getElementById('preview').addEventListener('click', (e) => {
                     const manifestObj = getManifest();
