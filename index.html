@@ -7,8 +7,11 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <script src="https://unpkg.com/fflate@0.8.2"></script>
     <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.6/Sortable.min.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
     <style>
         html,
         body {
@@ -30,6 +33,22 @@
         .btn.btn-danger.btn-less-padding {
             padding: 0.1rem;
         }
+
+        .preview-panel {
+            width: 75%;
+        }
+
+        .side-panel {
+            height: calc(100vh - 8px);
+            width: 25%;
+            overflow: auto;
+        }
+
+        #inputlist {
+            min-height: 10em;
+            max-height: 100%;
+            overflow: auto;
+        }
     </style>
 </head>
 
@@ -44,116 +63,122 @@
         <p>An error occured. Please refresh page.</p>
     </div>
 
-    <div class="container-fluid d-flex h-100 flex-column">
-        <div class="row">
-            <h1>SCORMVERTER</h1>
-        </div>
+    <div class="container-fluid d-flex flex-column">
         <div class="row flex-grow-1">
-            <div class="col border p-3 rounded">
-                <h5>Input files</h5>
-                <div class="input-group mb-3">
-                    <input id="file_picker" type="file" class="form-control" webkitdirectory directory multiple>
-                </div>
-                <ul id="inputlist" class="list-group border h-75">
-                </ul>
-            </div>
+            <div class="border p-3 rounded side-panel">
+                <h1>SCORMVERTER</h1>
+                <nav id="tablist" class="nav nav-tabs" role="tablist">
+                    <button class="nav-link active" id="about-tab" data-bs-toggle="tab" data-bs-target="#about-tab-pane"
+                        type="button" role="tab">Instructions</button>
+                    <button class="nav-link" id="file-tab" data-bs-toggle="tab" data-bs-target="#file-tab-pane"
+                        type="button" role="tab">Files</button>
+                    <button class="nav-link" id="generate-tab" data-bs-toggle="tab" data-bs-target="#generate-tab-pane"
+                        type="button" role="tab">Generate</button>
+                </nav>
 
-            <div class="col border p-3 rounded">
-                <h5>Output files</h5>
-                <div class="input-group mb-3 invisible">
-                    <input type="file" class="form-control" webkitdirectory directory multiple>
-                </div>
-                <ul id="outputlist" class="list-group border h-75">
-                </ul>
-            </div>
-
-
-            <div class="col border p-3 rounded d-flex flex-column">
-                <form id="data-form">
-                    <div class="input-group mb-3">
-                        <span class="input-group-text">Title</span>
-                        <input id="course_title" type="text" class="form-control" placeholder="Course Title" required>
-                    </div>
-
-                    <div class="input-group mb-3">
-                        <label class="input-group-text" for="logo_picker">Logo</label>
-                        <input id="logo_picker" type="file" class="form-control" accept="image/*" required>
-                    </div>
-
-                    <div class="row mb-3">
-                        <div class="col input-group">
-                            <span class="input-group-text" for="primary_color">Primary Color</span>
-                            <input type="color" id="primary_color" class="form-control form-control-color"
-                                name="primary_color" value="#575757" />
+                <div class="tab-content pt-2" id="tablist-pane">
+                    <div class="tab-pane show active" id="about-tab-pane" role="tabpanel" tabindex="0">
+                        <div class="mb-3">
+                            <h5>Instructions</h5>
+                            <ol>
+                                <li>Click "Files" tab to select input files.</li>
+                                <li>Click "Choose Files" and select a folder.</li>
+                                <li>All mp4 files will be loaded to the list below the button.</li>
+                                <li>Drag-and-drop the files to change the order, or click the trash button to remove
+                                    from the list.</li>
+                                <li>Click "Generate" tab to enter course options.</li>
+                                <li>Press "Preview" to see preview on the right pane.</li>
+                                <li>Click "Generate" to generate the final output.</li>
+                            </ol>
                         </div>
-
-                        <div class="col input-group">
-                            <span class="input-group-text" for="bg_color">Background Color</span>
-                            <input type="color" id="bg_color" class="form-control form-control-color" name="bg_color"
-                                value="#FFFFFF" />
+                        <div class="mb-3">
+                            <h5>Note</h5>
+                            <p>Everything is processed in the browser. Nothing is stored in the server.</p>
+                            <p>These libraries are used:</p>
+                            <ul>
+                                <li><a href="https://101arrowz.github.io/fflate/">fflate</a></li>
+                                <li><a href="https://getbootstrap.com">Bootstrap</a></li>
+                                <li><a href="https://github.com/SortableJS/Sortable">Sortable</a></li>
+                            </ul>
                         </div>
                     </div>
 
-                    <div class="form-check mb-3">
-                        <input type="checkbox" id="disable_navigation" class="form-check-input"
-                            name="disable_navigation" checked />
-                        <span class="form-check-label" for="disable_navigation">Disable Previous / Next</span>
+                    <div class="tab-pane" id="file-tab-pane" role="tabpanel" tabindex="0">
+                        <h5>Files</h5>
+                        <div class="input-group mb-3">
+                            <input id="file_picker" type="file" class="form-control" webkitdirectory directory multiple>
+                        </div>
+                        <ul id="inputlist" class="list-group border">
+                        </ul>
                     </div>
 
-                    <div class="form-check mb-3">
-                        <input type="checkbox" id="disable_seeking" class="form-check-input" name="disable_seeking"
-                            checked />
-                        <span class="form-check-label" for="disable_seeking">Disable video seek</span>
-                    </div>
+                    <div class="tab-pane" id="generate-tab-pane" role="tabpanel" tabindex="0">
+                        <h5>Course Options</h5>
+                        <form id="data-form">
+                            <div class="mb-3">
+                                <span class="form-label">Title</span>
+                                <input id="course_title" type="text" class="form-control" placeholder="Course Title"
+                                    required>
+                            </div>
 
-                    <div class="form-check mb-3">
-                        <input type="checkbox" id="disable_speed_change" class="form-check-input"
-                            name="disable_speed_change" checked />
-                        <span class="form-check-label" for="disable_speed_change">Disable Video Speed</span>
-                    </div>
+                            <div class="mb-3">
+                                <label class="form-label" for="logo_picker">Logo</label>
+                                <input id="logo_picker" type="file" class="form-control" accept="image/*" required>
+                            </div>
 
-                    <div class="mb-3">
-                        <button id="add_all_output" type="button" class="btn btn-secondary">Move all to Output</button>
-                        <button id="add_all_input" type="button" class="btn btn-secondary">Move all to Input</button>
-                    </div>
-                    <div class="mb-3">
-                        <button id="generate" type="submit" class="btn btn-primary">Generate</button>
-                    </div>
-                </form>
+                            <div class="row mb-3">
+                                <div class="col">
+                                    <label class="form-label" for="primary_color">Primary Color</label>
+                                    <input type="color" id="primary_color" class="form-control form-control-color"
+                                        name="primary_color" value="#575757" />
+                                </div>
 
-                <div class="mb-3">
-                    <span>Progress</span>
-                    <div class="progress">
-                        <div id="progress" class="progress-bar progress-bar-striped progress-bar-animated"
-                            role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+                                <div class="col">
+                                    <label class="form-label" for="bg_color">Background Color</label>
+                                    <input type="color" id="bg_color" class="form-control form-control-color"
+                                        name="bg_color" value="#FFFFFF" />
+                                </div>
+                            </div>
+
+                            <div class="form-check mb-3">
+                                <input type="checkbox" id="disable_navigation" class="form-check-input"
+                                    name="disable_navigation" checked />
+                                <span class="form-check-label" for="disable_navigation">Disable Previous / Next</span>
+                            </div>
+
+                            <div class="form-check mb-3">
+                                <input type="checkbox" id="disable_seeking" class="form-check-input"
+                                    name="disable_seeking" checked />
+                                <span class="form-check-label" for="disable_seeking">Disable video seek</span>
+                            </div>
+
+                            <div class="form-check mb-3">
+                                <input type="checkbox" id="disable_speed_change" class="form-check-input"
+                                    name="disable_speed_change" checked />
+                                <span class="form-check-label" for="disable_speed_change">Disable Video Speed</span>
+                            </div>
+
+                            <div class="mb-3">
+                                <button id="preview" type="button" class="btn btn-secondary">Preview</button>
+                                <button id="generate" type="submit" class="btn btn-primary">Generate</button>
+                            </div>
+                        </form>
+
+                        <div class="mb-3">
+                            <span>Progress</span>
+                            <div class="progress">
+                                <div id="progress" class="progress-bar progress-bar-striped progress-bar-animated"
+                                    role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+                            </div>
+                            <p id="progress_text"></p>
+                        </div>
                     </div>
-                    <p id="progress_text"></p>
-                </div>
-                <div class="mb-3">
-                    <h5>Instructions</h5>
-                    <ol>
-                        <li>Click "Choose Files" and select a folder.</li>
-                        <li>All mp4 files will be loaded to the "Input files" tab.</li>
-                        <li>Drag-and-drop files from "Input files" to "Output files" to include them in the SCORM.</li>
-                        <li>You can also use the "Move all to Output" and "Move all to Input" button to move items
-                            around.</li>
-                        <li>Use the trash icon to remove the file.</li>
-                        <li>Enter the title and select the logo.</li>
-                        <li>Click "Generate".</li>
-                    </ol>
-                </div>
-                <div class="mb-3">
-                    <h5>Note</h5>
-                    <p>Everything is processed in the browser. Nothing is stored in the server.</p>
-                    <p>These libraries are used:</p>
-                    <ul>
-                        <li><a href="https://101arrowz.github.io/fflate/">fflate</a></li>
-                        <li><a href="https://getbootstrap.com">Bootstrap</a></li>
-                        <li><a href="https://github.com/SortableJS/Sortable">Sortable</a></li>
-                    </ul>
                 </div>
             </div>
 
+            <div class="preview-panel">
+                <iframe id="iframe" class="h-100 w-100"></iframe>
+            </div>
         </div>
     </div>
 
@@ -249,6 +274,20 @@
             newArray.set(array);
             return newArray;
         }
+
+        function setProgress(progress, completed, text) {
+            const progressBar = document.getElementById('progress');
+            progressBar.style.width = `${progress * 100}%`;
+            if (completed) {
+                progressBar.classList.add('bg-success');
+                progressBar.classList.remove('progress-bar-striped');
+            } else {
+                progressBar.classList.remove('bg-success');
+                progressBar.classList.add('progress-bar-striped');
+            }
+            document.getElementById('progress_text').textContent = text ? text : '';
+        }
+
         const generatedIds = {};
         // generate random ID
         // https://www.codemzy.com/blog/random-unique-id-javascript
@@ -261,16 +300,8 @@
             return id;
         }
 
-        function setProgress(progress, text) {
-            document.getElementById('progress').style.width = `${progress * 100}%`;
-            document.getElementById('progress_text').textContent = text ? text : '';
-        }
-
-
         const inputList = document.getElementById('inputlist');
-        const outputList = document.getElementById('outputlist');
-        const inputSortable = Sortable.create(inputList, { group: 'inputoutput' });
-        const outputSortable = Sortable.create(outputList, { group: 'inputoutput' });
+        const inputSortable = Sortable.create(inputList);
         let fileList = {};
         document.getElementById('file_picker').addEventListener('change', (e) => {
             const mp4List = Array.from(e.target.files)
@@ -281,26 +312,111 @@
             mp4List.forEach(x => addItem(inputList, x.name, x.id));
         });
 
-        document.getElementById('add_all_output').addEventListener('click', (e) => {
-            Array.from(inputList.children).forEach((n) => {
-                inputList.removeChild(n);
-                outputList.appendChild(n);
-            });
-        });
-
-        document.getElementById('add_all_input').addEventListener('click', (e) => {
-            Array.from(outputList.children).forEach((n) => {
-                outputList.removeChild(n);
-                inputList.appendChild(n);
-            });
-        });
-
-        document.getElementById('data-form').addEventListener('submit', async (e) => {
-            e.preventDefault();
-            const output = outputSortable.toArray();
+        function getManifest() {
+            const output = inputSortable.toArray();
             const files = output.map(x => fileList[x]);
             const courseId = randomId();
             const courseTitle = document.getElementById('course_title').value;
+            return {
+                files: files,
+                logo: document.getElementById('logo_picker').files[0],
+                manifest: {
+                    "language": "en-US",
+                    "logo": {
+                        "name": "logo.png",
+                        "fullPath": `courses/${courseId}/resources/logo.png`,
+                        "url": ""
+                    },
+                    "name": courseTitle,
+                    "colorScheme": {
+                        "primary": document.getElementById('primary_color').value,
+                        "mediaBackground": document.getElementById('bg_color').value
+                    },
+                    "modifiedAt": new Date().getDate(),
+                    "createdAt": new Date().toUTCString(),
+                    "ownerId": randomId(),
+                    "available": true,
+                    "courseId": courseId,
+                    "baseURL": "./assets",
+                    "settings": {
+                        "showCloseCourseButton": false,
+                        "hideProgressBar": false,
+                        "navigationMode": document.getElementById('disable_navigation').checked ? "disabled" : "free"
+                    },
+                    "folderId": null,
+                    "pages": files.map((file, index) => ({
+                        "order": index + 1,
+                        "closedCaption": {
+                            "name": "",
+                            "fullPath": "",
+                            "url": ""
+                        },
+                        "resourceType": "video",
+                        "resourceId": randomId(),
+                        "title": file.name,
+                        "settings": {
+                            "disablePlaybackRate": document.getElementById('disable_speed_change').checked,
+                            "disableSeek": document.getElementById('disable_seeking').checked,
+                            "disablePiP": false
+                        },
+                        "video": {
+                            "vimeoUrl": "",
+                            "name": file.id,
+                            "url": "",
+                            "fullPath": `courses/${courseId}/resources/${file.id}`,
+                            "youtubeUrl": "",
+                            "type": "upload"
+                        }
+                    }))
+                }
+            };
+        }
+
+        // register service worker for preview
+        navigator.serviceWorker.register('./sw.js', { scope: '/' })
+            .then((registration) => {
+                document.getElementById('preview').addEventListener('click', (e) => {
+                    const manifestObj = getManifest();
+                    registration.active.postMessage(manifestObj);
+                });
+
+                navigator.serviceWorker.addEventListener('message', (event) => {
+                    if (event.data === 'OK') {
+                        const iframe = document.getElementById('iframe');
+                        // refresh iframe
+                        iframe.src = './assets/index.html';
+                        // inject stub scorm API for faster load
+                        const stateObj = {
+                            'cmi.core.lesson_status': 'not attempted',
+                            'cmi.core.score.raw': '0',
+                            'cmi.core.lesson_location': '{}',
+                            'cmi.suspend_data': '',
+                            'cmi.core.student_id': '{}',
+                            'cmi.core.student_name': '{}'
+                        };
+                        iframe.onload = (e) => {
+                            iframe.contentWindow.API = {
+                                LMSGetLastError: () => 0,
+                                LMSGetErrorString: (errorCode) => 'stub',
+                                LMSGetDiagnostic: (errorCode) => 'stub',
+                                LMSCommit: () => "true",
+                                LMSSetValue: (name, value) => { stateObj[name] = value.toString(); return "true" },
+                                LMSGetValue: (name) => stateObj[name].toString(),
+                                LMSFinish: () => "true",
+                                LMSInitialize: () => "true"
+                            };
+                        };
+                    }
+                })
+            });
+
+        document.getElementById('data-form').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const manifestObj = getManifest();
+            const manifestJson = manifestObj.manifest;
+            const files = manifestObj.files;
+
+            const courseTitle = manifestJson.name;
             const courseTitleXml =
                 courseTitle.replace(/&/g, "&amp;")
                     .replace(/</g, "&lt;")
@@ -309,55 +425,6 @@
                     .replace(/'/g, "&apos;");
             const courseTitleEscaped = courseTitle.replace(/[^A-Za-z0_9]/g, '_');
             const manifestXml = new TextDecoder().decode(assetMap['imsmanifest.xml']).replace(/{{ COURSE_TITLE }}/g, courseTitleXml);
-            const manifestJson = {
-                "language": "en-US",
-                "logo": {
-                    "name": "logo.png",
-                    "fullPath": `courses/${courseId}/resources/logo.png`,
-                    "url": ""
-                },
-                "name": courseTitle,
-                "colorScheme": {
-                    "primary": document.getElementById('primary_color').value,
-                    "mediaBackground": document.getElementById('bg_color').value
-                },
-                "modifiedAt": new Date().getDate(),
-                "createdAt": new Date().toUTCString(),
-                "ownerId": randomId(),
-                "available": true,
-                "courseId": courseId,
-                "baseURL": "./assets",
-                "settings": {
-                    "showCloseCourseButton": false,
-                    "hideProgressBar": false,
-                    "navigationMode": document.getElementById('disable_navigation').checked ? "disabled" : "free"
-                },
-                "folderId": null,
-                "pages": files.map((file, index) => ({
-                    "order": index + 1,
-                    "closedCaption": {
-                        "name": "",
-                        "fullPath": "",
-                        "url": ""
-                    },
-                    "resourceType": "video",
-                    "resourceId": randomId(),
-                    "title": file.name,
-                    "settings": {
-                        "disablePlaybackRate": document.getElementById('disable_speed_change').checked,
-                        "disableSeek": document.getElementById('disable_seeking').checked,
-                        "disablePiP": false
-                    },
-                    "video": {
-                        "vimeoUrl": "",
-                        "name": file.id,
-                        "url": "",
-                        "fullPath": `courses/${courseId}/resources/${file.id}`,
-                        "youtubeUrl": "",
-                        "type": "upload"
-                    }
-                }))
-            };
 
             let writeChunk = (buffer) => { };
             let closeFile = () => { };
@@ -392,11 +459,11 @@
                 if (final) {
                     Promise.all(writePromises)
                         .then(() => closeFile())
-                        .then(() => setProgress(0, 'Downloaded.'));
+                        .then(() => setProgress(100, true, 'Downloaded.'));
                 }
             });
 
-            setProgress(0, 'Starting...')
+            setProgress(0, false, 'Starting...')
             const assetFiles = assetList.length + 3;
             let totalFiles = assetFiles + files.length;
             // add icon
@@ -407,7 +474,7 @@
             await addFileObj(zip, 'imsmanifest.xml', new TextEncoder().encode(manifestXml));
             // add manifest JSON
             await addFileObj(zip, 'data/course.json', new TextEncoder().encode(JSON.stringify(manifestJson)));
-            setProgress(assetFiles / totalFiles, 'Assets added...');
+            setProgress(assetFiles / totalFiles, false, 'Assets added...');
             // add videos
             let i = 0;
             while (files.length) {
@@ -415,7 +482,7 @@
                 const processFiles = files.splice(-parallelCount, parallelCount);
                 await Promise.all(processFiles.map(file => addFileObj(zip, `assets/${file.id}`, file.file)));
                 i += parallelCount;
-                setProgress((assetFiles + i) / totalFiles, `Processing: ${processFiles[0].name}`);
+                setProgress((assetFiles + i) / totalFiles, false, `Processing: ${processFiles[0].name}`);
             }
             zip.end();
         });
